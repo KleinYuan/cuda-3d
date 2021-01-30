@@ -6,23 +6,23 @@
 # Structure
 
 ```
-./
 ├── operators
 │   └── README.md
 ├── README.md
 └── tutorials
-    ├── cuBLAS
-    └── hello_world
-        ├── coordinating_parallel.cu
-        ├── error101.cu
-        ├── error_macro.cu
-        ├── grid_stride.cu
-        ├── hello_world.cu
-        ├── loop_accelerate.cu
-        ├── Makefile
-        ├── matrix_mul.cu
-        ├── memory101.cu
-        ├── mismatched_config.cu
-        ├── README.md
-        └── vector_add.cu
+    ├── hello_world
+    │   ├── coordinating_parallel.cu
+    │   ├── error101.cu
+    │   ├── error_macro.cu
+    │   ├── grid_stride.cu
+    │   ├── hello_world.cu
+    │   ├── loop_accelerate.cu
+    │   ├── Makefile
+    │   ├── matrix_mul.cu
+    │   ├── memory101.cu
+    │   ├── mismatched_config.cu
+    │   ├── README.md
+    │   └── vector_add.cu
+    └── memory
+
 ```
