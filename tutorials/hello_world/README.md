@@ -2,6 +2,10 @@
 
 This hellow world project contains basic practice codes from the NVIDIA course [Fundamentals of Accelerated Computing with CUDA C/C++](https://courses.nvidia.com/courses/course-v1:DLI+C-AC-01+V1/about). The purpose is to provide fundamental examples to introduce the basic concepts, archs, syntax, coordinating-parallel-threads, memory management and debug, with native CUDA.
 
+
+![coordinating](https://user-images.githubusercontent.com/8921629/106368230-f5cc0000-62fc-11eb-8384-1b7cf0a2347c.png)
+
+
 The project is tested on a 2080ti GPU (sm_75):
 
 
@@ -11,6 +15,7 @@ The project is tested on a 2080ti GPU (sm_75):
 - [X] [loop_accelerate.cu](loop_accelerate.cu)
 - [X] [coordinating_parallel.cu](coordinating_parallel.cu)
 
+![map](https://user-images.githubusercontent.com/8921629/106368236-054b4900-62fd-11eb-9cb9-a98deb86a566.png)
 
 How to run it? Check the Makefile.
 
@@ -102,6 +107,10 @@ __global void kernel(int *a, int N)
 ```
 
 - [X] [grid_stride.cu](grid_stride.cu)
+
+![grid_stride](https://user-images.githubusercontent.com/8921629/106368246-198f4600-62fd-11eb-8a51-fb57b45c41c4.png)
+
+
 
 # Error Handling
 
