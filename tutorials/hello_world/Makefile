@@ -6,3 +6,15 @@ run-loop-accelerate:
 
 run-coordinating-parallel:
 	nvcc -arch=sm_75 -o coordinating-parallel coordinating_parallel.cu -run
+
+run-memory101:
+	nvcc -arch=sm_75 -o memory101 memory101.cu -run
+
+run-mismatched-config:
+	nvcc -arch=sm_75 -o mismatched-config mismatched_config.cu -run
+
+run-grid-stride:
+	nvcc -arch=sm_75 -o grid_stride grid_stride.cu -run
+
+run-error101:
+	nvcc -arch=sm_75 -o error101 error101.cu -run
