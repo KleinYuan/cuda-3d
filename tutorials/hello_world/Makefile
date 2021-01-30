@@ -18,3 +18,9 @@ run-grid-stride:
 
 run-error101:
 	nvcc -arch=sm_75 -o error101 error101.cu -run
+
+run-vector-add:
+	nvcc -arch=sm_75 -o vector-add vector_add.cu -run
+
+run-matrix-mul:
+	nvcc -arch=sm_75 -o matrix-mul matrix_mul.cu -run
