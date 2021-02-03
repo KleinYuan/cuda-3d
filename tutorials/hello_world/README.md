@@ -1,6 +1,6 @@
 # Hello World
 
-This hellow world project contains basic practice codes from the NVIDIA course [Fundamentals of Accelerated Computing with CUDA C/C++](https://courses.nvidia.com/courses/course-v1:DLI+C-AC-01+V1/about). The purpose is to provide fundamental examples to introduce the basic concepts, archs, syntax, coordinating-parallel-threads, memory management and debug, with native CUDA.
+This hello world project contains basic practice codes from the NVIDIA course [Fundamentals of Accelerated Computing with CUDA C/C++](https://courses.nvidia.com/courses/course-v1:DLI+C-AC-01+V1/about). The purpose is to provide fundamental examples to introduce the basic concepts, archs, syntax, coordinating-parallel-threads, memory management and debug, with native CUDA.
 
 
 ![coordinating](https://user-images.githubusercontent.com/8921629/106368230-f5cc0000-62fc-11eb-8384-1b7cf0a2347c.png)
@@ -34,6 +34,9 @@ make run-hello-world
 >>Perform GPU code ...
 >>Accessing the third thread of the second block!
 ```
+
+If you meet any issues here, check the [trouble-shooting document](TROUBLESHOOT.md).
+
 
 # Memory
 
