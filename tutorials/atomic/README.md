@@ -66,8 +66,6 @@ As you can see both kernel updates the value in the same address:
 - 0x7f96f4000020: 2.1 + 2 + 2*2 = 8.1
 - 0x7f96f4000030: 3.1 + 3 + 3*3 = 15.1
 
-This is because
-
 # Reference
 
 - https://on-demand.gputechconf.com/gtc/2013/presentations/S3101-Atomic-Memory-Operations.pdf
