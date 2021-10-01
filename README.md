@@ -1,6 +1,12 @@
 # CUDA-3D
 
 - [X] Tutorials of CUDA fundamentals
+  - [X] Hello World
+  - [ ] Atomic Functions
+  - [ ] Thrust
+  - [ ] cuBLAS
+  - [ ] cuDNN
+  - [ ] Memory
 - [ ] Native CUDA implementations for 3d point clouds operations, feature engineering and basic algorithms
 
 # Structure
@@ -10,6 +16,10 @@
 │   └── README.md
 ├── README.md
 └── tutorials
+    ├── atomic
+    │   ├── atomic101.cu
+    │   ├── Makefile
+    │   └── README.md
     ├── hello_world
     │   ├── coordinating_parallel.cu
     │   ├── error101.cu
@@ -22,7 +32,7 @@
     │   ├── memory101.cu
     │   ├── mismatched_config.cu
     │   ├── README.md
+    │   ├── TROUBLESHOOT.md
     │   └── vector_add.cu
     └── memory
-
 ```
