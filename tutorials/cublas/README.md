@@ -1,13 +1,13 @@
 # CUBLAS
 
-## Find Max
-Finding the max value in a CUDA array can be easily done in cublas.
+## Find Max Mag
+Finding the max magnitude (NOT VALUE!!!) in a CUDA array can be easily done in cublas.
 The example of [find_max_mag.cu](find_max_mag.cu) is for that.
 
-```
+```````
 nvcc -lcublas -o find_max find_max.cu -run
-# or make find_max
-```
+# or make find_max_mag
+```````
 
 will yield the following:
 

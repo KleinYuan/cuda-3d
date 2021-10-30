@@ -3,7 +3,7 @@
 - [X] Tutorials of CUDA fundamentals
   - [X] Hello World
   - [X] Atomic Functions
-  - [ ] Thrust
+  - [X] Thrust
   - [X] cuBLAS
   - [ ] cuDNN
   - [ ] Memory
@@ -12,7 +12,7 @@
 # Structure
 
 ```
-.
+./
 ├── operators
 │   └── README.md
 ├── README.md
@@ -39,5 +39,9 @@
     │   ├── README.md
     │   ├── TROUBLESHOOT.md
     │   └── vector_add.cu
-    └── memory
+    ├── memory
+    └── thrust
+        ├── find_max.cu
+        ├── Makefile
+        └── README.md
 ```
