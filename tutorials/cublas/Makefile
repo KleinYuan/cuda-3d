@@ -1,2 +1,2 @@
 find_max:
-	nvcc -lcublas -o find_max find_max.cu -run
+	nvcc -lcublas -o find_max_mag find_max_mag.cu -run

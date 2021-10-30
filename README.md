@@ -2,9 +2,9 @@
 
 - [X] Tutorials of CUDA fundamentals
   - [X] Hello World
-  - [ ] Atomic Functions
+  - [X] Atomic Functions
   - [ ] Thrust
-  - [ ] cuBLAS
+  - [X] cuBLAS
   - [ ] cuDNN
   - [ ] Memory
 - [ ] Native CUDA implementations for 3d point clouds operations, feature engineering and basic algorithms
@@ -12,12 +12,17 @@
 # Structure
 
 ```
+.
 ├── operators
 │   └── README.md
 ├── README.md
 └── tutorials
     ├── atomic
     │   ├── atomic101.cu
+    │   ├── Makefile
+    │   └── README.md
+    ├── cublas
+    │   ├── find_max_mag.cu
     │   ├── Makefile
     │   └── README.md
     ├── hello_world

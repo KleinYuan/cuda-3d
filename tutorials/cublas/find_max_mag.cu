@@ -15,7 +15,7 @@ int main()
 {
   // Init
   const int N = 6;
-  float foo [N] = {0.1, 1.1, 2.1, 3.1, 5.1, 4.1};
+  float foo [N] = {0.1, 1.1, 2.1, 3.1, 5.1, -8.1};
   float *host_data = &foo[0];
   float *device_data;
   size_t size = N * sizeof(float);
