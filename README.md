@@ -12,13 +12,13 @@
 # Structure
 
 ```
-./
 ├── operators
 │   └── README.md
 ├── README.md
 └── tutorials
     ├── atomic
     │   ├── atomic101.cu
+    │   ├── atomic_find_max.cu
     │   ├── Makefile
     │   └── README.md
     ├── cublas

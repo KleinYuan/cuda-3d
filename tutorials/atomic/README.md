@@ -1,4 +1,6 @@
-# Atomic 101
+# Atomic Functions
+
+## Atomic 101
 
 An atomic function performs a read-modify-write atomic operation on one 32-bit or 64-bit word residing in global or shared memory. 
 For example, atomicAdd() reads a word at some address in global or shared memory, 
@@ -66,6 +68,31 @@ As you can see both kernel updates the value in the same address:
 - 0x7f96f4000020: 2.1 + 2 + 2*2 = 8.1
 - 0x7f96f4000030: 3.1 + 3 + 3*3 = 15.1
 
-# Reference
+## Reference
 
 - https://on-demand.gputechconf.com/gtc/2013/presentations/S3101-Atomic-Memory-Operations.pdf
+
+## Atomic Max
+
+Using Atomic function to find the max value in a given array:
+
+```
+make atomic_find_max
+```
+
+And it will yield:
+
+```
+nvcc -arch=sm_75 -o atomic_find_max atomic_find_max.cu -run
+[findMaxKernel] Perform GPU code, comparing 0.000000 (old)  and 2.100000 (new) at 0x7ff656000020 
+[findMaxKernel] Perform GPU code, comparing 2.100000 (old)  and 3.100000 (new) at 0x7ff656000030 
+[findMaxKernel] Perform GPU code, comparing 3.100000 (old)  and 0.100000 (new) at 0x7ff656000000 
+[findMaxKernel] Perform GPU code, comparing 3.100000 (old)  and 1.100000 (new) at 0x7ff656000010 
+max_val is 3.100000
+```
+which is correct.
+
+You can compare this with the thrust and cublas ones:
+
+- [thrust/find_max.cu](../thrust/find_max.cu)
+- [cublas/find_max_mag.cu](../cublas/find_max_mag.cu)
