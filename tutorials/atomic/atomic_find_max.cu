@@ -32,6 +32,19 @@ __global__ void findMaxKernel(float *data, int N, float *max_val){
   }
 }
 
+__global__ void findMaxAndOffsetKernel(float *data, int N, float *max_val, float *device_offset){
+  int idxWithinTheGrid = threadIdx.x + blockDim.x * blockIdx.x;
+  int gridStride = gridDim.x * blockDim.x;
+
+  for(int i = idxWithinTheGrid; i < N; i += gridStride)
+  {
+    float old = atomicMax(max_val, data[i]);
+    float old_offset = old + *device_offset;
+    printf("[findMaxKernel] Perform GPU code, comparing %f (old)  and %f (new) at %p \n", old, data[i], &data[0] + sizeof(float) * i);
+    printf("[findMaxKernel] After offset %f (old)  becomes %f (old_offset)  \n", old, old_offset);
+
+  }
+}
 
 int main()
 {
@@ -44,6 +57,14 @@ int main()
   float max_val = 0.f;
   float *device_max;
 
+  // The following offset is to show how to de-reference device pointer in a kernel
+  // uncomment findMaxAndOffsetKernel to see the effect
+  float offset_val = 2.f;
+  float *device_offset;
+  cudaMalloc(&device_offset, sizeof(float));
+  cudaMemcpy(device_offset, &offset_val,  sizeof(float), cudaMemcpyHostToDevice);
+
+
   cudaMallocManaged(&device_data, size);
   cudaMallocManaged(&device_max, sizeof(float));
   // Copy foo -> host_data to device_data
@@ -51,9 +72,12 @@ int main()
   cudaMemcpy(device_max, &max_val, sizeof(float), cudaMemcpyHostToDevice);
   // Run a custom kernel to find the max val in foo, adding the index to the element
   findMaxKernel<<<4, 1>>>(device_data, N, device_max);
+  // findMaxAndOffsetKernel<<<4, 1>>>(device_data, N, device_max, device_offset);
   cudaMemcpy(&max_val, device_max, sizeof(float), cudaMemcpyDeviceToHost);
   // Sync
   checkCuda(cudaDeviceSynchronize());
   printf("max_val is %lf\n", max_val);
   cudaFree(device_data);
+  cudaFree(device_max);
+  cudaFree(device_offset);
 }
