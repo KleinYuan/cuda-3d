@@ -7,13 +7,23 @@
   - [X] cuBLAS
   - [ ] cuDNN
   - [ ] Memory
-- [ ] Native CUDA implementations for 3d point clouds operations, feature engineering and basic algorithms
+- [ ] Popular operators for 3d point clouds
+  - [X] Uniform Sampling
+  - [X] Euclidean Distance
+  - [ ] Chamfer Distance
+  - [ ] Earth Mover Distance
+  - [ ] Euclidean Clustering
+  - [ ] Depth Clustering
 
 # Structure
 
 ```
+.
 ├── operators
-│   └── README.md
+│   ├── euclidean_distance.cu
+│   ├── Makefile
+│   ├── README.md
+│   └── uniform_sample.cu
 ├── README.md
 └── tutorials
     ├── atomic
