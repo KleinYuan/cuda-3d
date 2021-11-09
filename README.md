@@ -10,7 +10,7 @@
 - [ ] Popular operators for 3d point clouds
   - [X] Uniform Sampling
   - [X] Euclidean Distance
-  - [ ] Chamfer Distance
+  - [X] Chamfer Distance
   - [ ] Earth Mover Distance
   - [ ] Euclidean Clustering
   - [ ] Depth Clustering
@@ -20,8 +20,13 @@
 ```
 .
 ├── operators
+│   ├── chamfer_distance.cu
 │   ├── euclidean_distance.cu
 │   ├── Makefile
+│   ├── python
+│   │   ├── chamfer_distance.py
+│   │   ├── __init__.py
+│   │   └── README.md
 │   ├── README.md
 │   └── uniform_sample.cu
 ├── README.md
