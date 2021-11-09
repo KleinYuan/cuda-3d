@@ -65,9 +65,9 @@ int main() {
   float random_xyz1 [num_points_xyz1 * dim_points] = {0.1, 1.1, 2.1, -0.1, 5.1, -8.1, -23.1, -24.2, 12.2};
   float random_xyz2 [num_points_xyz2 * dim_points] = {5.2, 5.1, -32.2, -100.3, 0.0, 4.1};
   float init_chamfer_distance_forward [num_points_xyz1];
-  std::fill_n(init_chamfer_distance_forward, num_points_xyz1, 1000000);
+  std::fill_n(init_chamfer_distance_forward, num_points_xyz1, std::numeric_limits<float>::max());
   float init_chamfer_distance_backward [num_points_xyz2];
-  std::fill_n(init_chamfer_distance_backward, num_points_xyz2, 1000000);
+  std::fill_n(init_chamfer_distance_backward, num_points_xyz2, std::numeric_limits<float>::max());
   float *host_xyz1 = &random_xyz1[0];
   float *host_xyz2 = &random_xyz2[0];
   float *chamfer_distance_forward = &init_chamfer_distance_forward[0];
